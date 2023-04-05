@@ -6,7 +6,7 @@ const Header = ({ setGenre, GL, setSearch, setPageNum, setList }) => {
         <header className="header">
             <div className="inner">
                 <h1>
-                    <a href="/">Park's Movie List</a>
+                    <a href="https://saimang12.github.io/react_movie/">Park's Movie List</a>
                 </h1>
                 <nav className="gnb">
                     <ul className="g_list">
