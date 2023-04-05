@@ -30,7 +30,7 @@
     line-height: 80px;
     background: #111;
     color: #fff;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #6a6969;
 
     .inner {
         width: 1400px;
@@ -39,9 +39,12 @@
         h1 {
             font-size: 30px;
             font-weight: 700;
+            color: #c39900;
+
         }
 
         .gnb {
+            line-height: 30px;
             margin: 0 0 10px 0;
 
             ul {
@@ -51,9 +54,7 @@
                 flex-wrap: wrap;
 
 
-                li {
-                    line-height: 30px;
-                }
+                li {}
             }
         }
     }
@@ -62,7 +63,7 @@
 }
 
 main {
-    min-height: 70vh;
+    min-height: 80vh;
     padding: 50px 0;
     background: #333;
 
@@ -71,24 +72,35 @@ main {
         margin: 0 auto 30px auto;
         text-align: center;
 
-        input {
-            padding: 2px;
-            outline: none;
-            margin: 0 5px 0 0;
-        }
+        form {
+            margin: 0 0 10px 0;
 
-        button {
-            border: none;
-            padding: 2px;
-            background: none;
-            cursor: pointer;
-            vertical-align: -2px;
+            input {
+                padding: 2px;
+                outline: none;
+                margin: 0 5px 0 0;
+            }
 
-            i {
-                color: #fff;
-                font-size: 20px;
+            button {
+                border: none;
+                padding: 2px;
+                background: none;
+                cursor: pointer;
+                vertical-align: -2px;
+
+                i {
+                    color: #fff;
+                    font-size: 20px;
+                }
             }
         }
+
+        .total {
+            color: #cfcfcf;
+            margin: 0 25px 0 0;
+            font-size: 15px;
+        }
+
     }
 
     .page_btn {
@@ -115,6 +127,9 @@ main {
         color: #fff;
         margin: 0 0 50px 0;
 
+        &.on {
+            display: none;
+        }
 
         .inner {
             position: relative;
@@ -324,5 +339,12 @@ main {
     text-align: center;
     padding: 50px 0;
     background: #111;
-    color: #fff;
+    color: #ddd;
+    font-size: 15px;
+
+    .inner {
+        p {
+            margin: 0 0 5px 0;
+        }
+    }
 }

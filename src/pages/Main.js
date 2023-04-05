@@ -4,7 +4,7 @@ import Detail from "./Detail";
 import Search from "./Search";
 import Slide from "./Slide";
 
-const Main = ({ movie, on, setOn, input, setInput, setSearch, setPageNum, listNum, pageLimit, list, setList, movieList, limit }) => {
+const Main = ({ movie, on, setOn, input, setInput, setSearch, setPageNum, listNum, pageLimit, list, setList, movieList, limit, genre }) => {
 
     // const [movie, setMovie] = useState([]);
     // const getMovie = async () => {
@@ -30,7 +30,7 @@ const Main = ({ movie, on, setOn, input, setInput, setSearch, setPageNum, listNu
     return (
 
         <main>
-            <Search input={input} setInput={setInput} setSearch={setSearch} />
+            <Search input={input} setInput={setInput} setSearch={setSearch} movieList={movieList} genre={genre} />
             <div className="page_btn">
                 {
                     list > 1 &&

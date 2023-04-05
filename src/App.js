@@ -66,7 +66,7 @@ function App() {
 
       <Routes>
         <Route path={`/`} element={<Layout setGenre={setGenre} GL={GL} setSearch={setSearch} setPageNum={setPageNum} setList={setList} />}>
-          <Route path={`/`} element={<Main movie={movie} on={on} setOn={setOn} input={input} setInput={setInput} search={search} setSearch={setSearch} setPageNum={setPageNum} listNum={listNum} pageLimit={pageLimit} list={list} setList={setList} movieList={movieList} limit={limit} />} >
+          <Route path={`/`} element={<Main movie={movie} on={on} setOn={setOn} input={input} setInput={setInput} search={search} setSearch={setSearch} setPageNum={setPageNum} listNum={listNum} pageLimit={pageLimit} list={list} setList={setList} movieList={movieList} limit={limit} genre={genre} />} >
 
             <Route path={`/detail/:id`} element={<Detail movie={movie} on={on} setOn={setOn} />} />
           </Route>

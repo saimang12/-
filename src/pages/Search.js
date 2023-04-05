@@ -1,6 +1,6 @@
 import { useRef } from "react"
 
-const Search = ({ input, setInput, setSearch }) => {
+const Search = ({ input, setInput, setSearch, movieList, genre }) => {
     const text = useRef(null);
 
     const SearchHandler = (e) => {
@@ -14,7 +14,6 @@ const Search = ({ input, setInput, setSearch }) => {
             setSearch(input)
         }
 
-
     }
     return (
         <div className="search_box">
@@ -22,7 +21,7 @@ const Search = ({ input, setInput, setSearch }) => {
                 <input type="text" value={input} onChange={e => setInput(e.target.value)} ref={text} />
                 <button><i className="xi-search"></i></button>
             </form>
-
+            <div className="total">{genre == '' ? 'Movie' : genre} | Total : {movieList} </div>
         </div>
     )
 }

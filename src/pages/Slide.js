@@ -1,12 +1,12 @@
 import "slick-carousel/slick/slick.css";
 import Slider from "react-slick";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 
 const Slide = ({ movie, coverImg, setOn, movieList }) => {
 
-    const [show, setShow] = useState(6)
+    const [slideOn, setSlideOn] = useState(false)
 
     const s = useRef(null);
 
@@ -14,13 +14,15 @@ const Slide = ({ movie, coverImg, setOn, movieList }) => {
 
     const test = () => {
         if (movieList < 6) {
-            setShow(0)
-        } else {
-            console.log(s.current);
+            setSlideOn(true)
         }
+
+
     }
 
-
+    useEffect(() => {
+        test()
+    }, [])
 
     const num = () => {
         Math.floor(Math.random() * 10 + 0)
@@ -29,11 +31,11 @@ const Slide = ({ movie, coverImg, setOn, movieList }) => {
 
 
     const mainSlideOption = {
-        slidesToShow: show,
+        slidesToShow: 6,
         arrows: false,
         autoplay: true,
-        autoplaySpeed: 4000,
-        speed: 2000,
+        autoplaySpeed: 3000,
+        speed: 1000,
         cssEase: "linear",
 
     }
@@ -41,9 +43,9 @@ const Slide = ({ movie, coverImg, setOn, movieList }) => {
 
     return (
         <>
-            <div className="mainSlide">
+            <div className={`mainSlide ${slideOn ? 'on' : ''}`}>
                 <div className={`inner ${movie && 'on' || ''}`}>
-                    <Slider {...mainSlideOption} className="main_slide" ref={s}>
+                    <Slider {...mainSlideOption} className="main_slide" ref={s} >
                         {
                             movie &&
                             movie.map((it, idx) => {
