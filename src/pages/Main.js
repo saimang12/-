@@ -1,5 +1,5 @@
 import { BsChevronDoubleLeft, BsChevronDoubleRight } from "react-icons/bs";
-import { Link, Route, Routes } from "react-router-dom";
+import { Link, Route, Routes, useParams } from "react-router-dom";
 import Detail from "./Detail";
 import Search from "./Search";
 import Slide from "./Slide";
